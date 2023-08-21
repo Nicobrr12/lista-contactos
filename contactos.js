@@ -4,14 +4,17 @@ let listaDeContactos = [];
 let lectorId = 1;
 
 
-function agregarContacto(nombreCompleto,apellido,telefono,ubicacion) {
+function agregarContacto(nombreCompleto,apellido,telefono,ciudad,direccion) {
   let nuevoContacto = {
     
     id: lectorId,
     nombre: nombreCompleto,
     apellido: apellido,
     telefono: telefono,
-    ubicacion: ubicacion 
+    ubicacion : {
+      ciudad: ciudad,
+      dirrecion: direccion,
+    }
   };
   
   listaDeContactos.push(nuevoContacto);
@@ -41,7 +44,7 @@ function borrarContactoPorId(id) {
 
 agregarContacto("Nicolas","pulido",3148566405,"facatativa-transversal 2 sur 1 a66")
 agregarContacto("Luisiño","Rafael",3121728328,"Venezuela-caracas")
-
+agregarContacto("Nicolas","pulido",3148566405,"facatativa","transversal 2 sur 1 a66")
 console.log("Lista antes de borrar:", listaDeContactos);
 
 borrarContactoPorId(2)
