@@ -13,7 +13,7 @@ function agregarContacto(nombreCompleto,apellido,telefono,ciudad,direccion) {
     telefono: telefono,
     ubicacion : {
       ciudad: ciudad,
-      dirrecion: direccion,
+      direccion: direccion,
     }
   };
   
